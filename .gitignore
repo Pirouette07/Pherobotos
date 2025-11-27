@@ -1,0 +1,17 @@
+# Godot
+.import/
+.export/
+.godot/
+*.import
+
+# Editor backups / temp
+*~
+*.tmp
+
+# IDE
+.vscode/
+.idea/
+
+# Exports / binaries
+*.exe
+*.dll
