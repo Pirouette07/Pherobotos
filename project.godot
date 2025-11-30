@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="Pherobotos"
+run/main_scene="uid://cnn6jqxfsypql"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
+[filesystem]
+
+import/blender/enabled=false
 
 [rendering]
 
