@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://nk8nrdnwtapq"]
+
+[ext_resource type="Script" uid="uid://qut7tdimitqk" path="res://BasePrincipale/base_principale.gd" id="1_2y067"]
+[ext_resource type="PackedScene" uid="uid://bvcgor28i4e2j" path="res://BasePrincipale/Termitiere.glb" id="1_shttl"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_w0ken"]
+radius = 25.0
+
+[node name="BasePrincipale" type="Node3D"]
+script = ExtResource("1_2y067")
+
+[node name="AireSelection" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.42631, 0)
+
+[node name="CollisionTermitiere" type="CollisionShape3D" parent="AireSelection"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+shape = SubResource("SphereShape3D_w0ken")
+
+[node name="Termitiere" parent="AireSelection" instance=ExtResource("1_shttl")]
+transform = Transform3D(30, 0, 0, 0, 20, 0, 0, 0, 30, 0, 0, 0)
+
+[node name="Indicateur" type="Node3D" parent="AireSelection"]

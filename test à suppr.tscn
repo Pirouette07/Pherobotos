@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bbq0p6mja5dfq"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nqq26"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_rb5m5"]
+points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
+
+[node name="scene" type="Node3D"]
+
+[node name="Sol" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 10, -0.01, -10)
+mesh = SubResource("PlaneMesh_nqq26")
+
+[node name="SolCorp" type="StaticBody3D" parent="Sol"]
+
+[node name="SolCollision" type="CollisionShape3D" parent="Sol/SolCorp"]
+shape = SubResource("ConvexPolygonShape3D_rb5m5")
+
+[node name="CaméraGénérale" type="Camera3D" parent="Sol"]
+transform = Transform3D(-4.371139e-09, -0.1, 0, -4.371139e-09, 1.9106854e-16, 0.099999994, -0.1, 4.371139e-09, -4.3711386e-09, 0, 3, 0)
